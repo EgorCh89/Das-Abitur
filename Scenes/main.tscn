@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://by3y5akv8pbvb"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_3qm61"]
+[ext_resource type="Texture2D" uid="uid://d4jmgq4t6it18" path="res://assets/53368396575_3df5e27de3_o.jpg" id="2_ctfi8"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(575.25, 322.5)
+scale = Vector2(2.39562, 2.82895)
+script = ExtResource("1_3qm61")
+
+[node name="533683965753Df5e27De3O" type="Sprite2D" parent="."]
+position = Vector2(-0.521774, 0)
+scale = Vector2(0.472869, 0.296875)
+texture = ExtResource("2_ctfi8")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 58.7531
+offset_top = 54.9674
+offset_right = 231.753
+offset_bottom = 98.9674
+text = "Přistoupit ke zkoušce"
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.631
+offset_top = -97.0326
+offset_right = 165.369
+offset_bottom = -63.0326
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 6.3963
+offset_top = 3.96743
+offset_right = 277.396
+offset_bottom = 26.9674
+text = "Vítejte všichni u maturitní zkoušky 2024"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

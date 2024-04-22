@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg5qgngm2x3qb"]
+
+[ext_resource type="Texture2D" uid="uid://b65ccrotyd86d" path="res://assets/class.jpg" id="1_olxq4"]
+[ext_resource type="PackedScene" uid="uid://iaei37n3aq2c" path="res://Objects/zak.tscn" id="2_uuymy"]
+[ext_resource type="PackedScene" uid="uid://i31to3sqc5e3" path="res://Scenes/zkousejici.tscn" id="3_dn2qc"]
+
+[node name="Zkouška" type="Node2D"]
+
+[node name="Class2" type="Sprite2D" parent="."]
+position = Vector2(227.25, 323)
+scale = Vector2(0.745833, 1.075)
+texture = ExtResource("1_olxq4")
+flip_h = true
+
+[node name="Class" type="Sprite2D" parent="."]
+position = Vector2(800.5, 323.5)
+scale = Vector2(1.175, 1.075)
+texture = ExtResource("1_olxq4")
+
+[node name="Zak" parent="." instance=ExtResource("2_uuymy")]
+position = Vector2(1013, 403)
+
+[node name="Zkousejici" parent="." instance=ExtResource("3_dn2qc")]
+position = Vector2(108, 237)

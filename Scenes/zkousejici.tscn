@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://i31to3sqc5e3"]
+
+[ext_resource type="Texture2D" uid="uid://b8t57po34q63e" path="res://assets/teacher.png" id="1_744wp"]
+[ext_resource type="Script" path="res://Scenes/zkousejici.gd" id="1_fai3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q174p"]
+size = Vector2(198, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe11r"]
+size = Vector2(372.5, 226.5)
+
+[node name="Zkousejici" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_fai3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q174p")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Odpovedi" type="Node" parent="."]
+
+[node name="Teacher" type="Sprite2D" parent="."]
+scale = Vector2(0.289855, 0.333333)
+texture = ExtResource("1_744wp")
+
+[node name="Tuseni" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuseni"]
+position = Vector2(301.75, -1.25)
+shape = SubResource("RectangleShape2D_xe11r")
+
+[connection signal="body_entered" from="Tuseni" to="." method="_on_tuseni_body_entered"]

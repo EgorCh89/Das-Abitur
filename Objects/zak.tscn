@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://iaei37n3aq2c"]
+
+[ext_resource type="Script" path="res://Objects/zak.gd" id="1_p4g37"]
+[ext_resource type="Texture2D" uid="uid://nj2ssimy5yc7" path="res://assets/student.jpg" id="2_5phkk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd11h"]
+size = Vector2(198, 230)
+
+[node name="Zak" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_p4g37")
+
+[node name="Student" type="Sprite2D" parent="."]
+scale = Vector2(0.249364, 0.333813)
+texture = ExtResource("2_5phkk")
+region_enabled = true
+region_rect = Rect2(140.164, 20.6256, 786.697, 695.374)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kd11h")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Odpovedi" type="Node" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
